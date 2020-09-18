@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c8495a50-967f-4e8f-a9c0-02c8e0308b96}">
+		<property name="assetPath">
+			<value>Bee_1 (1).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{975310ad-3873-4022-9f3a-23a593e1493a}</destination>
+		</relationship>
+	</object>
+</objects>
