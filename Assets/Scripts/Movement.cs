@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     [SerializeField] private float spd = 1.0f;
 
