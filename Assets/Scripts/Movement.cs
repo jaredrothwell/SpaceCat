@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private float JumpForce = 30.0f;
     [SerializeField] private float Gscale = 1.0f;
 
+    public bool canJump = false;
+
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private CircleCollider2D cc;
@@ -28,6 +30,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        anime.SetBool("IsJumping", false);
         if (gravity == "zero")
         {
             rb.gravityScale = 0;
@@ -83,7 +86,7 @@ public class Movement : MonoBehaviour
         }
         Vector2 movement = new Vector2(horizontal, vertical);
 
-        rb.AddForce(movement.normalized * Gspd);
+        rb.AddForce(movement.normalized * Gspd * Time.deltaTime);
 
         float rot = 0;
         if (Input.GetKey("e"))
@@ -96,7 +99,7 @@ public class Movement : MonoBehaviour
             rot += 1;
             //GetComponentInChildren<SpriteRenderer>().flipX = true;
         }
-        rb.AddTorque(rot *Rspd);
+        rb.AddTorque(rot * Rspd * Time.deltaTime);
     }
 
     void MovementDown()
@@ -114,8 +117,10 @@ public class Movement : MonoBehaviour
             anime.SetBool("IsWalking", true);
             horizontal += 1;
         }
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && canJump)
         {
+            anime.SetBool("IsJumping", true);
+            canJump = false;
             vertical = JumpForce;
         }
         Vector2 velocity = new Vector2(horizontal * spd, rb.velocity.y + vertical);
@@ -139,8 +144,10 @@ public class Movement : MonoBehaviour
             anime.SetBool("IsWalking", true);
             horizontal += 1;
         }
-        if(Input.GetKeyDown("space"))
+        if(Input.GetKeyDown("space") && canJump)
         {
+            anime.SetBool("IsJumping", true);
+            canJump = false;
             vertical = -JumpForce;
         }
         Vector2 velocity = new Vector2(horizontal * spd, rb.velocity.y + vertical);
@@ -164,8 +171,10 @@ public class Movement : MonoBehaviour
             anime.SetBool("IsWalking", true);
             vertical += 1;
         }
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && canJump)
         {
+            anime.SetBool("IsJumping", true);
+            canJump = false;
             horizontal = -JumpForce;
         }
         Vector2 velocity = new Vector2(horizontal + rb.velocity.x, vertical * spd);
@@ -189,8 +198,10 @@ public class Movement : MonoBehaviour
             anime.SetBool("IsWalking", true);
             vertical += 1;
         }
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && canJump)
         {
+            anime.SetBool("IsJumping", true);
+            canJump = false;
             horizontal = JumpForce;
         }
         Vector2 velocity = new Vector2(horizontal + rb.velocity.x, vertical * spd);
@@ -228,5 +239,8 @@ public class Movement : MonoBehaviour
         }
     }
 
-
+    public void stopJump()
+    {
+        anime.SetBool("IsJumping", false);
+    }
 }

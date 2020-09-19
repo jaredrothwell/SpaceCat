@@ -9,6 +9,7 @@ TagManager:
   - up
   - right
   - left
+  - Ground
   layers:
   - Default
   - TransparentFX
