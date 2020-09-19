@@ -18,6 +18,72 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8252752360340187133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Atmos/Spaceship/Spaceship
+  m_EditorClassIdentifier: 
+  Path: event:/Atmos/Spaceship/Spaceship
+  guid: c781bba33a89444280f0d87a1d5cea4a
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7151710545069618435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-6765284883809877035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Space Cat/SPeaking
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Space Cat/SPeaking
+  guid: bee857bd37fe2442aaa016498ddd22d3
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6050148374255570880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,6 +104,104 @@ MonoBehaviour:
   - Name: Desktop
     Value: 746
   Exists: 1
+--- !u!114 &-6042799403493341169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Space Cat/Jumping
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Space Cat/Jumping
+  guid: 1d01abffbd76014ab92669ab9265703f
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4751702391099614513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Build/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Space Cat/Build/Desktop/Master.bank
+  Name: Build/Desktop/Master
+  lastModified: 637361234971391413
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-4052260937022906185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Space Cat/Boosting
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Space Cat/Boosting
+  guid: 2028acf1910ce94996eb85f2455f7260
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2725459969524434313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Build/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Space Cat/Build/Desktop/Master.strings.bank
+  Name: Build/Desktop/Master.strings
+  lastModified: 637361234971521438
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1166
+  - Name: 
+    Value: 1166
+  - Name: 
+    Value: 1166
+  - Name: Assets
+    Value: 1166
+  - Name: Build
+    Value: 1166
+  - Name: Metadata
+    Value: 1166
+  - Name: Plugins
+    Value: 1166
+  - Name: SFX
+    Value: 1166
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,16 +215,23 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6050148374255570880}
-  - {fileID: -9183627706458981312}
+  - {fileID: -2725459969524434313}
+  - {fileID: -4751702391099614513}
   EditorEvents:
-  - {fileID: 145642528589281796}
+  - {fileID: -6042799403493341169}
+  - {fileID: -4052260937022906185}
+  - {fileID: 949190145776489827}
+  - {fileID: 1184484915128464278}
+  - {fileID: 6641896463516892484}
+  - {fileID: -6765284883809877035}
+  - {fileID: -8252752360340187133}
+  - {fileID: 3190682624066937049}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -9183627706458981312}
+  - {fileID: -4751702391099614513}
   StringsBanks:
-  - {fileID: -6050148374255570880}
-  stringsBankWriteTime: 637360169634328830
+  - {fileID: -2725459969524434313}
+  stringsBankWriteTime: 637361234971521438
   cacheVersion: 5
 --- !u!114 &145642528589281796
 MonoBehaviour:
@@ -78,6 +249,99 @@ MonoBehaviour:
   guid: e55638c2c36ebe46bd04a005016bfc20
   Banks:
   - {fileID: -9183627706458981312}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &949190145776489827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Space Cat/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Space Cat/Walking
+  guid: 4e3e645a3ef3d542b5a19e2d363e1efb
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7151710545069618435}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1184484915128464278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Spaceship
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Spaceship
+  guid: 6d18b911a23a354193bf78cda9d13386
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3190682624066937049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Tutorial Cat/Speaking
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Tutorial Cat/Speaking
+  guid: cf53517bd4ebdd489419000fd9a32750
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6641896463516892484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Space Cat/SPIN
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Space Cat/SPIN
+  guid: 9872d62a599a494dbd3e238fccd40ed1
+  Banks:
+  - {fileID: -4751702391099614513}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

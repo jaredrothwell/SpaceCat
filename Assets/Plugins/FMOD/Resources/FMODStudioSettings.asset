@@ -236,7 +236,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 1
   sourceProjectPath: Assets/FMOD/FMOD_FOR_GAME/FMOD_FOR_GAME.fspro
-  sourceBankPath: Assets/FMOD/Wizard Test
+  sourceBankPath: Assets/FMOD/Space Cat
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
