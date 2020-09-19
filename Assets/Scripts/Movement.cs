@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     private BoxCollider2D bc;
     private CircleCollider2D cc;
     private Animator anime;
-    private bool IsZeroG = true;
+    private string gravity = "zero";
 
     // Start is called before the first frame update
     void Start()
@@ -28,20 +28,37 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IsZeroG)
+        if (gravity == "zero")
         {
+            rb.gravityScale = 0;
             anime.SetBool("IsWalking", false);
             ZeroGMovement();
         }
-        else
+        else if (gravity == "down")
         {
-
-            RegularMovement();
-            if(rb.velocity.x > 0.001 || rb.velocity.x < -0.001)
-                anime.SetBool("IsWalking", true);
-            else
-                anime.SetBool("IsWalking", false);
+            Physics2D.gravity = new Vector2(0, -9.81f);
+            rb.gravityScale = Gscale;
+            MovementDown();
         }
+        else if (gravity == "up")
+        {
+            Physics2D.gravity = new Vector2(0, -9.81f);
+            rb.gravityScale = -Gscale;
+            MovementUp();
+        }
+        else if (gravity == "right")
+        {
+            Physics2D.gravity = new Vector2(-9.81f, 0);
+            rb.gravityScale = -Gscale;
+            MovementRight();
+        }
+        else if (gravity == "left")
+        {
+            Physics2D.gravity = new Vector2(-9.81f, 0);
+            rb.gravityScale = Gscale;
+            MovementLeft();
+        }
+
     }
 
     void ZeroGMovement()
@@ -68,13 +85,6 @@ public class Movement : MonoBehaviour
 
         rb.AddForce(movement.normalized * Gspd);
 
-        if (Input.GetKeyDown("space"))
-        {
-            rb.gravityScale = Gscale;
-            cc.enabled = false;
-            bc.enabled = true;
-            IsZeroG = false;
-        }
         float rot = 0;
         if (Input.GetKey("e"))
         {
@@ -89,42 +99,134 @@ public class Movement : MonoBehaviour
         rb.AddTorque(rot *Rspd);
     }
 
-    void RegularMovement()
+    void MovementDown()
     {
+        anime.SetBool("IsWalking", false);
         float horizontal = 0;
+        float vertical = 0;
         if (Input.GetKey("a"))
         {
+            anime.SetBool("IsWalking", true);
             horizontal -= 1;
         }
         if (Input.GetKey("d"))
         {
+            anime.SetBool("IsWalking", true);
             horizontal += 1;
         }
-        Vector2 velocity = new Vector2(horizontal * spd, rb.velocity.y);
-
         if (Input.GetKeyDown("space"))
         {
-            rb.gravityScale = 0.0f;
-            cc.enabled = true;
-            bc.enabled = false;
-            velocity.y += JumpForce;
-            IsZeroG = true;
+            vertical = JumpForce;
         }
-
+        Vector2 velocity = new Vector2(horizontal * spd, rb.velocity.y + vertical);
         rb.velocity = velocity;
         rb.rotation = 0;
-        flip();
+        flip(true, rb.velocity.x);
     }
 
-    void flip()
+    void MovementUp()
     {
-        if (rb.velocity.x < 0)
+        anime.SetBool("IsWalking", false);
+        float horizontal = 0;
+        float vertical = 0;
+        if (Input.GetKey("a"))
+        {
+            anime.SetBool("IsWalking", true);
+            horizontal -= 1;
+        }
+        if (Input.GetKey("d"))
+        {
+            anime.SetBool("IsWalking", true);
+            horizontal += 1;
+        }
+        if(Input.GetKeyDown("space"))
+        {
+            vertical = -JumpForce;
+        }
+        Vector2 velocity = new Vector2(horizontal * spd, rb.velocity.y + vertical);
+        rb.velocity = velocity;
+        rb.rotation = 180;
+        flip(false, rb.velocity.x);
+    }
+
+    void MovementRight()
+    {
+        anime.SetBool("IsWalking", false);
+        float horizontal = 0;
+        float vertical = 0;
+        if (Input.GetKey("s"))
+        {
+            anime.SetBool("IsWalking", true);
+            vertical -= 1;
+        }
+        if (Input.GetKey("w"))
+        {
+            anime.SetBool("IsWalking", true);
+            vertical += 1;
+        }
+        if (Input.GetKeyDown("space"))
+        {
+            horizontal = -JumpForce;
+        }
+        Vector2 velocity = new Vector2(horizontal + rb.velocity.x, vertical * spd);
+        rb.velocity = velocity;
+        rb.rotation = 90;
+        flip(true, rb.velocity.y);
+    }
+
+    void MovementLeft()
+    {
+        anime.SetBool("IsWalking", false);
+        float horizontal = 0;
+        float vertical = 0;
+        if (Input.GetKey("s"))
+        {
+            anime.SetBool("IsWalking", true);
+            vertical -= 1;
+        }
+        if (Input.GetKey("w"))
+        {
+            anime.SetBool("IsWalking", true);
+            vertical += 1;
+        }
+        if (Input.GetKeyDown("space"))
+        {
+            horizontal = JumpForce;
+        }
+        Vector2 velocity = new Vector2(horizontal + rb.velocity.x, vertical * spd);
+        rb.velocity = velocity;
+        rb.rotation = 270;
+        flip(false, rb.velocity.y);
+    }
+
+    void flip(bool f, float x)
+    {
+        if (x < 0 && f)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
         }
-        else if (rb.velocity.x > 0)
+        else if (x > 0 && f)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false;
         }
+        else if (x < 0)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
+        }
+        else if (x > 0)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
+        }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "down" || collision.tag == "zero" || collision.tag == "up" || collision.tag == "right" || collision.tag == "left")
+        {
+            gravity = collision.tag;
+            Debug.Log(collision.tag);
+        }
+    }
+
+
 }
