@@ -6,12 +6,14 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float Gspd = 1.0f;
     [SerializeField] private float spd = 10.0f;
+    [SerializeField] private float Rspd = 1.0f;
     [SerializeField] private float JumpForce = 30.0f;
     [SerializeField] private float Gscale = 1.0f;
 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private CircleCollider2D cc;
+    private Animator anime;
     private bool IsZeroG = true;
 
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         cc = GetComponent<CircleCollider2D>();
+        anime = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -27,12 +30,17 @@ public class Movement : MonoBehaviour
     {
         if(IsZeroG)
         {
+            anime.SetBool("IsWalking", false);
             ZeroGMovement();
         }
         else
         {
 
             RegularMovement();
+            if(rb.velocity.x > 0.001 || rb.velocity.x < -0.001)
+                anime.SetBool("IsWalking", true);
+            else
+                anime.SetBool("IsWalking", false);
         }
     }
 
@@ -67,6 +75,18 @@ public class Movement : MonoBehaviour
             bc.enabled = true;
             IsZeroG = false;
         }
+        float rot = 0;
+        if (Input.GetKey("e"))
+        {
+            rot -= 1;
+            //GetComponentInChildren<SpriteRenderer>().flipX = false;
+        }
+        if (Input.GetKey("q"))
+        {
+            rot += 1;
+            //GetComponentInChildren<SpriteRenderer>().flipX = true;
+        }
+        rb.AddTorque(rot *Rspd);
     }
 
     void RegularMovement()
@@ -92,6 +112,7 @@ public class Movement : MonoBehaviour
         }
 
         rb.velocity = velocity;
+        rb.rotation = 0;
         flip();
     }
 
@@ -99,11 +120,11 @@ public class Movement : MonoBehaviour
     {
         if (rb.velocity.x < 0)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
         }
         else if (rb.velocity.x > 0)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
         }
     }
 }
