@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{f897751e-6d50-4345-a138-f6c9382e1dc8}">
+		<property name="assetPath">
+			<value>Low thump 10.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.44723356009070298</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fd13686a-1d91-4d64-a428-703ebf92ef5b}</destination>
+		</relationship>
+	</object>
+</objects>

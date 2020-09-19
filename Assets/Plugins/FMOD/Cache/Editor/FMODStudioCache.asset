@@ -18,6 +18,38 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8858796143635135289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Build/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/FMOD_FOR_GAME/Build/Wizard Test/Build/Desktop/Master.strings.bank
+  Name: Build/Desktop/Master.strings
+  lastModified: 637360260450413622
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 836
+  - Name: 
+    Value: 836
+  - Name: 
+    Value: 836
+  - Name: Assets
+    Value: 836
+  - Name: Build
+    Value: 836
+  - Name: Metadata
+    Value: 836
+  - Name: Plugins
+    Value: 836
+  Exists: 1
 --- !u!114 &-6050148374255570880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,11 +64,96 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/FMOD_FOR_GAME/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637360011260203373
+  lastModified: 637360279334116032
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 746
+  Exists: 0
+--- !u!114 &-5772921886248419864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fireball
+  m_EditorClassIdentifier: 
+  Path: event:/Fireball
+  guid: d77ea1188449bd418d1254723279ddbb
+  Banks:
+  - {fileID: 9073218798820500669}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3983712676559426079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Build/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/FMOD_FOR_GAME/Build/Wizard Test/Build/Desktop/Master.bank
+  Name: Build/Desktop/Master
+  lastModified: 637360260450383622
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1234939801984291782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  guid: 03173e02b10a6b4881a88f30309b958a
+  Banks:
+  - {fileID: 9073218798820500669}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -970909437478308162}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 52363
+--- !u!114 &-970909437478308162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -51,16 +168,19 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6050148374255570880}
-  - {fileID: -9183627706458981312}
+  - {fileID: 1318156906648138894}
+  - {fileID: 9073218798820500669}
   EditorEvents:
-  - {fileID: 145642528589281796}
+  - {fileID: -1234939801984291782}
+  - {fileID: 5855972607217444696}
+  - {fileID: -5772921886248419864}
+  - {fileID: 2310605926228475985}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -9183627706458981312}
+  - {fileID: 9073218798820500669}
   StringsBanks:
-  - {fileID: -6050148374255570880}
-  stringsBankWriteTime: 637360011260203373
+  - {fileID: 1318156906648138894}
+  stringsBankWriteTime: 637360292622389483
   cacheVersion: 5
 --- !u!114 &145642528589281796
 MonoBehaviour:
@@ -76,8 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/New Event
   guid: e55638c2c36ebe46bd04a005016bfc20
-  Banks:
-  - {fileID: -9183627706458981312}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -85,3 +204,99 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1318156906648138894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Build/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Wizard Test/Build/Desktop/Master.strings.bank
+  Name: Build/Desktop/Master.strings
+  lastModified: 637360292622389483
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 922
+  - Name: 
+    Value: 922
+  - Name: 
+    Value: 922
+  - Name: Assets
+    Value: 922
+  - Name: Build
+    Value: 922
+  - Name: Metadata
+    Value: 922
+  - Name: Plugins
+    Value: 922
+  Exists: 1
+--- !u!114 &2310605926228475985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/aDasDA
+  m_EditorClassIdentifier: 
+  Path: event:/aDasDA
+  guid: a19c3d0faa4fce4e9bfd5eb9e75a94ac
+  Banks:
+  - {fileID: 9073218798820500669}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5855972607217444696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Emeny attack
+  m_EditorClassIdentifier: 
+  Path: event:/Emeny attack
+  guid: 107bd22991d829489e41aaa43474e019
+  Banks:
+  - {fileID: 9073218798820500669}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9073218798820500669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Build/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Wizard Test/Build/Desktop/Master.bank
+  Name: Build/Desktop/Master
+  lastModified: 637360292622319467
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
