@@ -251,6 +251,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   shouldAttract: 0
+--- !u!1 &635074486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7595535764234752521, guid: a62e4f7cbe1c7214aa256564942c7971, type: 3}
+  m_PrefabInstance: {fileID: 957202323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &635074487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635074486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/New Event
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &683813150
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +477,7 @@ GameObject:
   - component: {fileID: 1131219740}
   - component: {fileID: 1131219739}
   - component: {fileID: 1131219742}
+  - component: {fileID: 1131219743}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -463,7 +492,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131219738}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1131219740
 Camera:
   m_ObjectHideFlags: 0
@@ -534,6 +563,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 611815521}
+--- !u!114 &1131219743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131219738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &1877264651
 GameObject:
   m_ObjectHideFlags: 0

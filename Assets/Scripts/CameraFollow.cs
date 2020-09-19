@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    public GameObject player;
 
     // Update is called once per frame
     void Update()
     {
-        float z = gameObject.transform.position.z;
-        gameObject.transform.position = player.transform.position;
-        gameObject.transform.position += new Vector3(0, 0, z);
+        if (player != null)
+        {
+            float z = gameObject.transform.position.z;
+            gameObject.transform.position = player.transform.position;
+            gameObject.transform.position += new Vector3(0, 0, z);
+        }
 
     }
 }
