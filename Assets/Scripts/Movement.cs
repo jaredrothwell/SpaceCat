@@ -18,6 +18,11 @@ public class Movement : MonoBehaviour
     private Animator anime;
     private string gravity = "zero";
 
+    FMOD.Studio.EventInstance Footsteps;
+    FMOD.Studio.EventDescription Surface;
+    FMOD.Studio.PARAMETER_DESCRIPTION sur;
+    FMOD.Studio.PARAMETER_ID SID;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +30,20 @@ public class Movement : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         cc = GetComponent<CircleCollider2D>();
         anime = GetComponentInChildren<Animator>();
+        Footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/Characters/Space Cat/Walking");
+
+        Surface = FMODUnity.RuntimeManager.GetEventDescription("event:/Characters/Space Cat/Walking");
+        Surface.getParameterDescriptionByName("Surface", out sur);
+        SID = sur.id;
+
+        Footsteps.setParameterByID(SID, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(Footsteps, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        Playsound();
         if (gravity == "zero")
         {
             rb.gravityScale = 0;
@@ -237,9 +251,75 @@ public class Movement : MonoBehaviour
             Debug.Log(collision.tag);
         }
     }
-
+    
     public void stopJump()
     {
         anime.SetBool("IsJumping", false);
+    }
+    public void Playsound()
+    {
+        FMOD.Studio.PLAYBACK_STATE pbs;
+        Footsteps.getPlaybackState(out pbs);
+        if (gravity == "zero")
+        {
+            Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+        else if (gravity == "down")
+        {
+            if (Input.GetKey("a") | Input.GetKey("d"))
+            {  
+                if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    Footsteps.start();
+                } 
+            }
+            if (Input.GetKeyUp("a") | Input.GetKeyUp("d"))
+            {
+                Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
+        }
+        else if (gravity == "up")
+        {
+            if (Input.GetKey("d") | Input.GetKey("a"))
+            {
+                if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    Footsteps.start();
+                }
+            }
+            if (Input.GetKeyUp("d") | Input.GetKeyUp("a"))
+            {
+                Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
+        }
+        else if (gravity == "right")
+        {
+            if (Input.GetKey("w") | Input.GetKey("s"))
+            {
+                if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    Footsteps.start();
+                }
+            }
+            if (Input.GetKeyUp("w") | Input.GetKeyUp("s"))
+            {
+                Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
+        }
+        else if (gravity == "left")
+        {
+            if (Input.GetKey("s") | Input.GetKey("w"))
+            {
+                if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    Footsteps.start();
+                }
+            }
+            if (Input.GetKeyUp("s") | Input.GetKeyUp("w"))
+            {
+                Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
+        }
+           
     }
 }

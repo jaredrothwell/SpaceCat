@@ -31,16 +31,16 @@ MonoBehaviour:
   m_Name: event:/Atmos/Spaceship/Spaceship
   m_EditorClassIdentifier: 
   Path: event:/Atmos/Spaceship/Spaceship
-  guid: c781bba33a89444280f0d87a1d5cea4a
+  guid: c95b87b87a28f046afb6d2e68561ac03
   Banks:
   - {fileID: -4751702391099614513}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 40500
 --- !u!114 &-7151710545069618435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6765284883809877035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,10 +161,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
-  lastModified: 637361002077282754
+  lastModified: 637361333718602183
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-4261670927072981927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-4052260937022906185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +208,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4007169189446631716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-2725459969524434313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,9 +242,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.strings.bank
   Name: Build/Desktop/Master.strings
-  lastModified: 637361002077282754
+  lastModified: 637361333718712207
   LoadResult: 0
   FileSizes:
+  - Name: 
+    Value: 1166
   - Name: 
     Value: 1166
   - Name: Assets
@@ -217,6 +259,46 @@ MonoBehaviour:
     Value: 1166
   - Name: SFX
     Value: 1166
+  Exists: 1
+--- !u!114 &-1298713050752523941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-126036185469144316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -247,7 +329,7 @@ MonoBehaviour:
   - {fileID: -4751702391099614513}
   StringsBanks:
   - {fileID: -2725459969524434313}
-  stringsBankWriteTime: 637361002077282754
+  stringsBankWriteTime: 637361333718712207
   cacheVersion: 5
 --- !u!114 &145642528589281796
 MonoBehaviour:
@@ -292,7 +374,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -7007538048506161955}
+  - {fileID: -1298713050752523941}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -342,6 +424,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4821819753718846752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &6641896463516892484
 MonoBehaviour:
   m_ObjectHideFlags: 0
