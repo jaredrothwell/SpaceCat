@@ -23,6 +23,16 @@ public class Movement : MonoBehaviour
     FMOD.Studio.PARAMETER_DESCRIPTION sur;
     FMOD.Studio.PARAMETER_ID SID;
 
+    FMOD.Studio.EventInstance Booster;
+    FMOD.Studio.EventDescription State;
+    FMOD.Studio.PARAMETER_DESCRIPTION OnOff;
+    FMOD.Studio.PARAMETER_ID IO;
+
+    FMOD.Studio.EventInstance Jump;
+    FMOD.Studio.EventDescription Up;
+    FMOD.Studio.PARAMETER_DESCRIPTION UpDown;
+    FMOD.Studio.PARAMETER_ID UD;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +41,20 @@ public class Movement : MonoBehaviour
         cc = GetComponent<CircleCollider2D>();
         anime = GetComponentInChildren<Animator>();
         Footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/Characters/Space Cat/Walking");
+        Booster = FMODUnity.RuntimeManager.CreateInstance("event:/Characters/Space Cat/Booster");
+        Jump = FMODUnity.RuntimeManager.CreateInstance("event:/Characters/Space Cat/Jumping");
 
         Surface = FMODUnity.RuntimeManager.GetEventDescription("event:/Characters/Space Cat/Walking");
         Surface.getParameterDescriptionByName("Surface", out sur);
         SID = sur.id;
+
+        State = FMODUnity.RuntimeManager.GetEventDescription("event:/Characters/Space Cat/Booster");
+        State.getParameterDescriptionByName("Booster", out OnOff);
+        IO = OnOff.id;
+
+        Up = FMODUnity.RuntimeManager.GetEventDescription("event:/Characters/Space Cat/Jumping");
+        Up.getParameterDescriptionByName("UpDown", out UpDown);
+        UD = UpDown.id;
 
         Footsteps.setParameterByID(SID, 0);
     }
@@ -43,7 +63,10 @@ public class Movement : MonoBehaviour
     void Update()
     {
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(Footsteps, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(Booster, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(Jump, GetComponent<Transform>(), GetComponent<Rigidbody>());
         Playsound();
+        Jump.setParameterByID(UD, 0);
         if (gravity == "zero")
         {
             rb.gravityScale = 0;
@@ -135,6 +158,7 @@ public class Movement : MonoBehaviour
             anime.SetBool("IsJumping", true);
             canJump = false;
             vertical = JumpForce;
+            Jump.start();
         }
         Vector2 velocity = new Vector2(horizontal * spd, rb.velocity.y + vertical);
         rb.velocity = velocity;
@@ -162,6 +186,7 @@ public class Movement : MonoBehaviour
             anime.SetBool("IsJumping", true);
             canJump = false;
             vertical = -JumpForce;
+            Jump.start();
         }
         Vector2 velocity = new Vector2(horizontal * spd, rb.velocity.y + vertical);
         rb.velocity = velocity;
@@ -189,6 +214,7 @@ public class Movement : MonoBehaviour
             anime.SetBool("IsJumping", true);
             canJump = false;
             horizontal = -JumpForce;
+            Jump.start();
         }
         Vector2 velocity = new Vector2(horizontal + rb.velocity.x, vertical * spd);
         rb.velocity = velocity;
@@ -216,6 +242,7 @@ public class Movement : MonoBehaviour
             anime.SetBool("IsJumping", true);
             canJump = false;
             horizontal = JumpForce;
+            Jump.start();
         }
         Vector2 velocity = new Vector2(horizontal + rb.velocity.x, vertical * spd);
         rb.velocity = velocity;
@@ -259,65 +286,84 @@ public class Movement : MonoBehaviour
     public void Playsound()
     {
         FMOD.Studio.PLAYBACK_STATE pbs;
-        Footsteps.getPlaybackState(out pbs);
         if (gravity == "zero")
         {
             Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        }
-        else if (gravity == "down")
-        {
-            if (Input.GetKey("a") | Input.GetKey("d"))
-            {  
-                if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
-                {
-                    Footsteps.start();
-                } 
-            }
-            if (Input.GetKeyUp("a") | Input.GetKeyUp("d"))
-            {
-                Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            }
-        }
-        else if (gravity == "up")
-        {
-            if (Input.GetKey("d") | Input.GetKey("a"))
+            Booster.getPlaybackState(out pbs);
+            Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            if (Input.GetKey("a") | Input.GetKey("w") | Input.GetKey("d") | Input.GetKey("s"))
             {
                 if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
                 {
-                    Footsteps.start();
+                    Booster.setParameterByID(IO, 1);
+                    Booster.start();
                 }
             }
-            if (Input.GetKeyUp("d") | Input.GetKeyUp("a"))
+            if (Input.GetKeyUp("a") | Input.GetKeyUp("d") | Input.GetKeyUp("s") | Input.GetKeyUp("w"))
             {
-                Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                Booster.setParameterByID(IO, 0);
+                Booster.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
-        else if (gravity == "right")
+        else if (gravity != "zero")
         {
-            if (Input.GetKey("w") | Input.GetKey("s"))
+            Booster.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Footsteps.getPlaybackState(out pbs);
+            if (gravity == "down")
             {
-                if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                if (Input.GetKey("a") | Input.GetKey("d"))
                 {
-                    Footsteps.start();
+                    if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                    {
+                        Footsteps.start();
+                    }
+                }
+                if (Input.GetKeyUp("a") | Input.GetKeyUp("d"))
+                {
+                    Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
             }
-            if (Input.GetKeyUp("w") | Input.GetKeyUp("s"))
+            else if (gravity == "up")
             {
-                Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            }
-        }
-        else if (gravity == "left")
-        {
-            if (Input.GetKey("s") | Input.GetKey("w"))
-            {
-                if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                if (Input.GetKey("d") | Input.GetKey("a"))
                 {
-                    Footsteps.start();
+                    if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                    {
+                        Footsteps.start();
+                    }
+                }
+                if (Input.GetKeyUp("d") | Input.GetKeyUp("a"))
+                {
+                    Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
             }
-            if (Input.GetKeyUp("s") | Input.GetKeyUp("w"))
+            else if (gravity == "right")
             {
-                Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                if (Input.GetKey("w") | Input.GetKey("s"))
+                {
+                    if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                    {
+                        Footsteps.start();
+                    }
+                }
+                if (Input.GetKeyUp("w") | Input.GetKeyUp("s"))
+                {
+                    Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                }
+            }
+            else if (gravity == "left")
+            {
+                if (Input.GetKey("s") | Input.GetKey("w"))
+                {
+                    if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                    {
+                        Footsteps.start();
+                    }
+                }
+                if (Input.GetKeyUp("s") | Input.GetKeyUp("w"))
+                {
+                    Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                }
             }
         }
            

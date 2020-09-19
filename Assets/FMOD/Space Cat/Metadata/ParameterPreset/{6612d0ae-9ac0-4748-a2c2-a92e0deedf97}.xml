@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{6612d0ae-9ac0-4748-a2c2-a92e0deedf97}">
+		<property name="name">
+			<value>Booster</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5af1a2ec-7167-49b3-b79e-05d379ee74a3}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c4297466-0431-4522-8691-d5742d587516}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c4297466-0431-4522-8691-d5742d587516}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>
