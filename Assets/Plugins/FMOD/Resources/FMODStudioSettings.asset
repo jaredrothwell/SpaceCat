@@ -236,7 +236,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 1
   sourceProjectPath: Assets/FMOD/FMOD_FOR_GAME/FMOD_FOR_GAME.fspro
-  sourceBankPath: Assets\FMOD\FMOD_FOR_GAME\Build
+  sourceBankPath: Assets/FMOD/Space Cat
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - Master
+  - Build/Desktop/Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
@@ -325,7 +325,7 @@ MonoBehaviour:
   active: 1
   Properties:
     LiveUpdate:
-      Value: 0
+      Value: 1
       HasValue: 1
     Overlay:
       Value: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
       Value: 0
       HasValue: 1
     BuildDirectory:
-      Value: Desktop
+      Value: 
       HasValue: 1
     SpeakerMode:
       Value: 3
