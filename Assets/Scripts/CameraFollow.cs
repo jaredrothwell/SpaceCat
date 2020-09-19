@@ -12,8 +12,7 @@ public class CameraFollow : MonoBehaviour
         if (player != null)
         {
             float z = gameObject.transform.position.z;
-            gameObject.transform.position = player.transform.position;
-            gameObject.transform.position += new Vector3(0, 0, z);
+            gameObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, z);
         }
 
     }
