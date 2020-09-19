@@ -161,7 +161,6 @@ MonoBehaviour:
   JumpForce: 4
   Gscale: 0.5
   canJump: 0
-  checkGround: {fileID: 2140023144}
 --- !u!114 &5402803887240930993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +186,7 @@ GameObject:
   - component: {fileID: 5402803887775853789}
   - component: {fileID: 5402803887775853779}
   - component: {fileID: 5402803887775853782}
+  - component: {fileID: 611815525}
   m_Layer: 8
   m_Name: spacecat
   m_TagString: Untagged
@@ -278,3 +278,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &611815525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402803887775853781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deae68b295d3ef240ad61b57c1b671db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

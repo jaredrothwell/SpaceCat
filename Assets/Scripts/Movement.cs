@@ -30,7 +30,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anime.SetBool("IsJumping", false);
         if (gravity == "zero")
         {
             rb.gravityScale = 0;
