@@ -20,12 +20,12 @@ public class Movement : MonoBehaviour
     public ParticleSystem ps2;
     public ParticleSystem ps3;
     public ParticleSystem ps4;
+    public string gravity = "zero";
 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private CircleCollider2D cc;
     private Animator anime;
-    private string gravity = "zero";
 
     FMOD.Studio.EventInstance Footsteps;
     FMOD.Studio.EventDescription Surface;
@@ -299,18 +299,18 @@ public class Movement : MonoBehaviour
             GetComponentInChildren<SpriteRenderer>().flipX = true;
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "down" || collision.tag == "zero" || collision.tag == "up" || collision.tag == "right" || collision.tag == "left")
-        {
-            gravity = collision.tag;
-        }
-    }
-    
+  
     public void stopJump()
     {
         anime.SetBool("IsJumping", false);
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "fuel")
+        {
+            fuel = Maxfuel;
+        }
     }
     public void Playsound()
     {

@@ -10,6 +10,7 @@ TagManager:
   - right
   - left
   - Ground
+  - fuel
   layers:
   - Default
   - TransparentFX
