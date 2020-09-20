@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c8a97eaf-d950-41d3-b60f-ec9eb1137699}">
+		<property name="assetPath">
+			<value>fill oxygen.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.6385260770975059</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fd13686a-1d91-4d64-a428-703ebf92ef5b}</destination>
+		</relationship>
+	</object>
+</objects>
