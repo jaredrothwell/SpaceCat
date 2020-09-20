@@ -315,7 +315,7 @@ public class Movement : MonoBehaviour
     public void Playsound()
     {
         FMOD.Studio.PLAYBACK_STATE pbs;
-        if (gravity == "zero")
+        if (gravity == "zero" && fuel > 0)
         {
             Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Booster.getPlaybackState(out pbs);
@@ -333,6 +333,11 @@ public class Movement : MonoBehaviour
                 Booster.setParameterByID(IO, 0);
                 Booster.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
+        }
+        else if(gravity == "zero" && fuel <= 0)
+        {
+            Booster.setParameterByID(IO, 0);
+            Booster.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
         else if (gravity != "zero")
         {
