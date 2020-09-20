@@ -350,7 +350,12 @@ public class Movement : MonoBehaviour
 
         }
     }
-  
+    public void OnDestroy()
+    {
+        Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        Booster.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
     public void stopJump()
     {
         anime.SetBool("IsJumping", false);
