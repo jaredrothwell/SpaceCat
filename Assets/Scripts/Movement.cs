@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using FMOD.Studio;
 
 public class Movement : MonoBehaviour
 {
@@ -21,6 +23,7 @@ public class Movement : MonoBehaviour
     public ParticleSystem ps3;
     public ParticleSystem ps4;
     public string gravity = "zero";
+    public Text deathText;
 
     public Transform t;
 
@@ -28,6 +31,7 @@ public class Movement : MonoBehaviour
     private BoxCollider2D bc;
     private CircleCollider2D cc;
     private Animator anime;
+    private bool IsDead = false;
 
     FMOD.Studio.EventInstance Refil;
 
@@ -97,7 +101,12 @@ public class Movement : MonoBehaviour
         ps3.enableEmission = false;
         ps4.enableEmission = false;
         anime.SetBool("IsZero", false);
-        if (gravity == "zero")
+        if (gravity == "dead" || IsDead)
+        {
+            deathText.text = "You Died! Press R to restart level";
+            IsDead = true;
+        }
+        else if (gravity == "zero")
         {
             rb.freezeRotation = false;
             anime.SetBool("IsZero", true);
@@ -135,6 +144,10 @@ public class Movement : MonoBehaviour
             MovementLeft();
         }
         updateFuelUI();
+        if(Input.GetKey("r"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     void checkGround()

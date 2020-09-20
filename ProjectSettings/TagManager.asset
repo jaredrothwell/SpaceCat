@@ -11,6 +11,7 @@ TagManager:
   - left
   - Ground
   - fuel
+  - dead
   layers:
   - Default
   - TransparentFX
