@@ -41,6 +41,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 40500
+--- !u!114 &-7225437097230682934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Booster
+  m_EditorClassIdentifier: 
+  Name: Booster
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7151710545069618435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,6 +77,26 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-7037705276439822194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Fuel
+  m_EditorClassIdentifier: 
+  Name: Fuel
+  Min: 0
+  Max: 10000
+  Default: 10000
   ID:
     data1: 0
     data2: 0
@@ -227,7 +267,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 3869403740014484726}
+  - {fileID: -67560346307353350}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -265,7 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
-  lastModified: 637362222672410513
+  lastModified: 637361978939370991
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -308,7 +348,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4315959849560592047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,11 +466,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.strings.bank
   Name: Build/Desktop/Master.strings
-  lastModified: 637362222672500544
+  lastModified: 637361978939410887
   LoadResult: 0
   FileSizes:
-  - Name: 
-    Value: 1324
   - Name: 
     Value: 1324
   - Name: Assets
@@ -524,6 +562,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-966113546249200542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-896153740916953912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,6 +622,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-67560346307353350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jumping/UpDown
+  m_EditorClassIdentifier: 
+  Name: UpDown
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +672,7 @@ MonoBehaviour:
   - {fileID: -4751702391099614513}
   StringsBanks:
   - {fileID: -2725459969524434313}
-  stringsBankWriteTime: 637362222672500544
+  stringsBankWriteTime: 637361978939410887
   cacheVersion: 5
 --- !u!114 &78832064469924739
 MonoBehaviour:
@@ -679,7 +757,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -4375501988901568861}
+  - {fileID: -966113546249200542}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -785,7 +863,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2238700956907245961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,7 +966,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3901891993139050135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,8 +1007,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 8033349050676595925}
-  - {fileID: 2134707809077282926}
+  - {fileID: -7037705276439822194}
+  - {fileID: -7225437097230682934}
   MinDistance: 1
   MaxDistance: 20
   Length: 6907
@@ -1216,7 +1294,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8182705606265044355
 MonoBehaviour:
   m_ObjectHideFlags: 0
