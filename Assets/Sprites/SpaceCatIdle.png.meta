@@ -17,6 +17,36 @@ TextureImporter:
   - first:
       213: -8655031703862926799
     second: SpaceCatWalking_4
+  - first:
+      213: 5036687665390627028
+    second: SpaceCatIdle_0
+  - first:
+      213: 4129713680805627058
+    second: SpaceCatIdle_1
+  - first:
+      213: 5996843343456717522
+    second: SpaceCatIdle_2
+  - first:
+      213: 4443093512580791733
+    second: SpaceCatIdle_3
+  - first:
+      213: 6923663343064915919
+    second: SpaceCatIdle_4
+  - first:
+      213: 3051923142484142901
+    second: SpaceCatIdle_0
+  - first:
+      213: -1287885462573306540
+    second: SpaceCatIdle_1
+  - first:
+      213: -1656828610324502859
+    second: SpaceCatIdle_2
+  - first:
+      213: -4711265492973594321
+    second: SpaceCatIdle_3
+  - first:
+      213: -282005995269841124
+    second: SpaceCatIdle_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -128,7 +158,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpaceCatWalking_0
+      name: SpaceCatIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d833aee0dbfd91ff0800000000000000
-      internalID: -64774716528118899
+      spriteID: 53baf85adeb9a5a20800000000000000
+      internalID: 3051923142484142901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceCatWalking_1
+      name: SpaceCatIdle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -163,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3291e4f2646c1580800000000000000
-      internalID: -8855092391139241410
+      spriteID: 45dadebcef2802ee0800000000000000
+      internalID: -1287885462573306540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceCatWalking_2
+      name: SpaceCatIdle_2
       rect:
         serializedVersion: 2
         x: 64
@@ -184,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4551c61f0ced3a30800000000000000
-      internalID: 4196769977329603915
+      spriteID: 5b667eb3823c109e0800000000000000
+      internalID: -1656828610324502859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceCatWalking_3
+      name: SpaceCatIdle_3
       rect:
         serializedVersion: 2
         x: 96
@@ -205,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d8848324869c29c0800000000000000
-      internalID: -3950617278835029799
+      spriteID: f29d0c8def83e9eb0800000000000000
+      internalID: -4711265492973594321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceCatWalking_4
+      name: SpaceCatIdle_4
       rect:
         serializedVersion: 2
         x: 128
@@ -226,8 +256,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 132a18b858623e780800000000000000
-      internalID: -8655031703862926799
+      spriteID: c1f196b9a0d161cf0800000000000000
+      internalID: -282005995269841124
       vertices: []
       indices: 
       edges: []

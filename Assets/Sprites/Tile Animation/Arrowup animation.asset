@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Arrowup animation
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 9002873278380741700, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: 3815430971589752966, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: -5193901553927252462, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: -4819211534653958967, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: 4481770901461747420, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: -7303976921011928040, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: 500087804093671569, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: 7012027462437709414, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: 4280482192965554387, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: -8705039117651184336, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: -8202140738567947992, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: -4116747314764064274, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: 7205136139491084132, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: 6019904924397497307, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: -8418361970674270838, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  - {fileID: -7619583164474038996, guid: 0b184216b8236ff459426d7a74359e3c, type: 3}
+  m_MinSpeed: 16
+  m_MaxSpeed: 16
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0

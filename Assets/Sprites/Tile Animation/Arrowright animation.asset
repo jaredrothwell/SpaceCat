@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Arrowright animation
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 1911694002877359157, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: -703223679368903926, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: -3475892884889850156, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: 8138253935072847516, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: -3755024275250074289, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: 7998044527853947939, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: 6115387315305619222, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: -6424440660771107468, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: 8607974815573659978, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: 2057221325423496684, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: -6656419852568557841, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: 6314476880018423225, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: -6251448448668986116, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: 4323215985380094731, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: -7071989914935945253, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  - {fileID: -8963087103171547382, guid: d8718af72372076448f0be6538a88baf, type: 3}
+  m_MinSpeed: 16
+  m_MaxSpeed: 16
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0

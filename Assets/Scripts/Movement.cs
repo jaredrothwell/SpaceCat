@@ -22,6 +22,8 @@ public class Movement : MonoBehaviour
     public ParticleSystem ps4;
     public string gravity = "zero";
 
+    public Transform t;
+
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private CircleCollider2D cc;
@@ -295,18 +297,24 @@ public class Movement : MonoBehaviour
         if (x < 0 && f)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
+            t.localPosition = new Vector3(0.125f, 0, 0);
+
         }
         else if (x > 0 && f)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false;
+            t.localPosition = new Vector3(0, 0, 0);
         }
         else if (x < 0)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false;
+            t.localPosition = new Vector3(0, 0, 0);
         }
         else if (x > 0)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
+            t.localPosition = new Vector3(0.125f, 0, 0);
+
         }
     }
   
