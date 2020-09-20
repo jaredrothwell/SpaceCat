@@ -164,7 +164,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 7504571821335473670}
+  - {fileID: -3468855732413786290}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
-  lastModified: 637361566878413877
+  lastModified: 637361352592173461
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -289,6 +289,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3468855732413786290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jumping/UpDown
+  m_EditorClassIdentifier: 
+  Name: UpDown
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2725459969524434313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,11 +323,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.strings.bank
   Name: Build/Desktop/Master.strings
-  lastModified: 637361566878503898
+  lastModified: 637361352592183443
   LoadResult: 0
   FileSizes:
-  - Name: 
-    Value: 1252
   - Name: 
     Value: 1252
   - Name: Assets
@@ -450,8 +468,28 @@ MonoBehaviour:
   - {fileID: -4751702391099614513}
   StringsBanks:
   - {fileID: -2725459969524434313}
-  stringsBankWriteTime: 637361566878503898
+  stringsBankWriteTime: 637361352592183443
   cacheVersion: 5
+--- !u!114 &78832064469924739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Booster
+  m_EditorClassIdentifier: 
+  Name: Booster
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &145642528589281796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,7 +553,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 2238700956907245961}
+  - {fileID: 1569983497672391356}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -582,6 +620,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &1569983497672391356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2238700956907245961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,7 +743,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 5753012705114402438}
+  - {fileID: 78832064469924739}
   MinDistance: 1
   MaxDistance: 20
   Length: 13754

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
@@ -9,8 +11,15 @@ public class Movement : MonoBehaviour
     [SerializeField] private float Rspd = 1.0f;
     [SerializeField] private float JumpForce = 30.0f;
     [SerializeField] private float Gscale = 1.0f;
+    [SerializeField] private int Maxfuel = 100;
+    [SerializeField] private int fuel = 100;
 
     public bool canJump = false;
+    public Text textUI = null;
+    public ParticleSystem ps1;
+    public ParticleSystem ps2;
+    public ParticleSystem ps3;
+    public ParticleSystem ps4;
 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
@@ -67,6 +76,10 @@ public class Movement : MonoBehaviour
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(Jump, GetComponent<Transform>(), GetComponent<Rigidbody>());
         Playsound();
         Jump.setParameterByID(UD, 0);
+        ps1.enableEmission = false;
+        ps2.enableEmission = false;
+        ps3.enableEmission = false;
+        ps4.enableEmission = false;
         if (gravity == "zero")
         {
             rb.gravityScale = 0;
@@ -97,28 +110,45 @@ public class Movement : MonoBehaviour
             rb.gravityScale = Gscale;
             MovementLeft();
         }
+        updateFuelUI();
+    }
 
+    void updateFuelUI()
+    {
+        if(textUI != null)
+        {
+            float percent = (((float)fuel / (float)Maxfuel) * 100f);
+            textUI.text = "Fuel " + (int)percent + "%";
+        }
     }
 
     void ZeroGMovement()
     {
         float horizontal = 0;
         float vertical = 0;
-        if (Input.GetKey("w"))
+        if (Input.GetKey("w") && fuel > 0)
         {
             vertical += 1;
+            fuel--;
+            ps2.enableEmission = true;
         }
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a") && fuel > 0)
         {
             horizontal -= 1;
+            fuel--;
+            ps4.enableEmission = true;
         }
-        if (Input.GetKey("s"))
+        if (Input.GetKey("s") && fuel > 0)
         {
             vertical -= 1;
+            fuel--;
+            ps1.enableEmission = true;
         }
-        if (Input.GetKey("d"))
+        if (Input.GetKey("d") && fuel > 0)
         {
             horizontal += 1;
+            fuel--;
+            ps3.enableEmission = true;
         }
         Vector2 movement = new Vector2(horizontal, vertical);
 
@@ -275,7 +305,6 @@ public class Movement : MonoBehaviour
         if(collision.tag == "down" || collision.tag == "zero" || collision.tag == "up" || collision.tag == "right" || collision.tag == "left")
         {
             gravity = collision.tag;
-            Debug.Log(collision.tag);
         }
     }
     
