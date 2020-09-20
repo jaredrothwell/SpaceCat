@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: leftlazer
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 9082429109045791810, guid: 774e4e41a8fa8504295ae2b6bcc8b835, type: 3}
+  - {fileID: 7394846351055212603, guid: 774e4e41a8fa8504295ae2b6bcc8b835, type: 3}
+  - {fileID: -6330152569626864739, guid: 774e4e41a8fa8504295ae2b6bcc8b835, type: 3}
+  - {fileID: 6488650829194282490, guid: 774e4e41a8fa8504295ae2b6bcc8b835, type: 3}
+  - {fileID: 8320944645083979353, guid: 774e4e41a8fa8504295ae2b6bcc8b835, type: 3}
+  m_MinSpeed: 10
+  m_MaxSpeed: 10
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0

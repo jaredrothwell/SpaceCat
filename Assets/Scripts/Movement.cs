@@ -83,8 +83,11 @@ public class Movement : MonoBehaviour
         ps2.enableEmission = false;
         ps3.enableEmission = false;
         ps4.enableEmission = false;
+        anime.SetBool("IsZero", false);
         if (gravity == "zero")
         {
+            rb.freezeRotation = false;
+            anime.SetBool("IsZero", true);
             anime.SetBool("IsFalling", false);
             rb.gravityScale = 0;
             anime.SetBool("IsWalking", false);
@@ -92,24 +95,28 @@ public class Movement : MonoBehaviour
         }
         else if (gravity == "down")
         {
+            rb.freezeRotation = true;
             Physics2D.gravity = new Vector2(0, -9.81f);
             rb.gravityScale = Gscale;
             MovementDown();
         }
         else if (gravity == "up")
         {
+            rb.freezeRotation = true;
             Physics2D.gravity = new Vector2(0, -9.81f);
             rb.gravityScale = -Gscale;
             MovementUp();
         }
         else if (gravity == "right")
         {
+            rb.freezeRotation = true;
             Physics2D.gravity = new Vector2(-9.81f, 0);
             rb.gravityScale = -Gscale;
             MovementRight();
         }
         else if (gravity == "left")
         {
+            rb.freezeRotation = true;
             Physics2D.gravity = new Vector2(-9.81f, 0);
             rb.gravityScale = Gscale;
             MovementLeft();

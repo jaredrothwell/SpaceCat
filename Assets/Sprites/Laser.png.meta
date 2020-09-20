@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: 2561bf22760427444bb78cc5ef0b0ffb
+guid: 774e4e41a8fa8504295ae2b6bcc8b835
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4487932585236045557
-    second: arrowleft_0
+      213: 9082429109045791810
+    second: Laser_0
   - first:
-      213: 990330675568042105
-    second: arrowleft_1
+      213: -8599512977041186160
+    second: Laser_1
   - first:
-      213: -6285196495769596084
-    second: arrowleft_2
+      213: -4876627861783150909
+    second: Laser_2
   - first:
-      213: 2725709955546184030
-    second: arrowleft_3
+      213: 7394846351055212603
+    second: Laser_3
   - first:
-      213: 7733344415243034848
-    second: arrowleft_4
+      213: -3134984308293451589
+    second: Laser_4
   - first:
-      213: 4136830363560160982
-    second: arrowleft_5
+      213: -7086537323571785821
+    second: Laser_5
   - first:
-      213: -6652295138939168062
-    second: arrowleft_6
+      213: -6330152569626864739
+    second: Laser_6
   - first:
-      213: 8487402032132848425
-    second: arrowleft_7
+      213: 7444769785482769600
+    second: Laser_7
   - first:
-      213: 6896432777173754607
-    second: arrowleft_8
+      213: 6696284105954170331
+    second: Laser_8
   - first:
-      213: 2699309896157363365
-    second: arrowleft_9
+      213: 6488650829194282490
+    second: Laser_9
   - first:
-      213: -641180174012677068
-    second: arrowleft_10
+      213: 7408158033249956994
+    second: Laser_10
   - first:
-      213: 7440976556064720835
-    second: arrowleft_11
+      213: 7618443584406369654
+    second: Laser_11
   - first:
-      213: -4978442012479996256
-    second: arrowleft_12
+      213: 8320944645083979353
+    second: Laser_12
   - first:
-      213: 1787046273608339535
-    second: arrowleft_13
+      213: 7409563813294569585
+    second: Laser_13
   - first:
-      213: -2594504282634383438
-    second: arrowleft_14
+      213: 6987423002858378337
+    second: Laser_14
   - first:
-      213: -3166799771800347316
-    second: arrowleft_15
+      213: 2643995761157989754
+    second: Laser_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -161,7 +161,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arrowleft_0
+      name: Laser_0
       rect:
         serializedVersion: 2
         x: 0
@@ -175,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01ea118719a7b1c0800000000000000
-      internalID: -4487932585236045557
+      spriteID: 24c875667254b0e70800000000000000
+      internalID: 9082429109045791810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_1
+      name: Laser_1
       rect:
         serializedVersion: 2
         x: 32
@@ -196,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 970e76f908c5ebd00800000000000000
-      internalID: 990330675568042105
+      spriteID: 0922912728468a880800000000000000
+      internalID: -8599512977041186160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_2
+      name: Laser_2
       rect:
         serializedVersion: 2
         x: 64
@@ -217,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4f8f16661f76c8a0800000000000000
-      internalID: -6285196495769596084
+      spriteID: 3ce74a41cccb25cb0800000000000000
+      internalID: -4876627861783150909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_3
+      name: Laser_3
       rect:
         serializedVersion: 2
         x: 96
@@ -238,14 +238,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e59731d53caa3d520800000000000000
-      internalID: 2725709955546184030
+      spriteID: b305d33a395cf9660800000000000000
+      internalID: 7394846351055212603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_4
+      name: Laser_4
       rect:
         serializedVersion: 2
         x: 128
@@ -259,14 +259,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e0ef4cc5cb525b60800000000000000
-      internalID: 7733344415243034848
+      spriteID: bb0ceb7a16c4e74d0800000000000000
+      internalID: -3134984308293451589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_5
+      name: Laser_5
       rect:
         serializedVersion: 2
         x: 160
@@ -280,14 +280,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dead0c3c49f86930800000000000000
-      internalID: 4136830363560160982
+      spriteID: 3afc4fca9df87ad90800000000000000
+      internalID: -7086537323571785821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_6
+      name: Laser_6
       rect:
         serializedVersion: 2
         x: 192
@@ -301,14 +301,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ca197601dc4ea3a0800000000000000
-      internalID: -6652295138939168062
+      spriteID: d935d59c6c7c628a0800000000000000
+      internalID: -6330152569626864739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_7
+      name: Laser_7
       rect:
         serializedVersion: 2
         x: 224
@@ -322,14 +322,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92bf4371e2f49c570800000000000000
-      internalID: 8487402032132848425
+      spriteID: 0c4f2420da2215760800000000000000
+      internalID: 7444769785482769600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_8
+      name: Laser_8
       rect:
         serializedVersion: 2
         x: 256
@@ -343,14 +343,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe26dcc621d05bf50800000000000000
-      internalID: 6896432777173754607
+      spriteID: bd51e7a7aeafdec50800000000000000
+      internalID: 6696284105954170331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_9
+      name: Laser_9
       rect:
         serializedVersion: 2
         x: 288
@@ -364,14 +364,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5acf72b8c00e57520800000000000000
-      internalID: 2699309896157363365
+      spriteID: af54ba10d815c0a50800000000000000
+      internalID: 6488650829194282490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_10
+      name: Laser_10
       rect:
         serializedVersion: 2
         x: 320
@@ -385,14 +385,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43483f267021a17f0800000000000000
-      internalID: -641180174012677068
+      spriteID: 284f1db2b701fc660800000000000000
+      internalID: 7408158033249956994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_11
+      name: Laser_11
       rect:
         serializedVersion: 2
         x: 352
@@ -406,14 +406,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c74f36f0c8a34760800000000000000
-      internalID: 7440976556064720835
+      spriteID: 67535e563162ab960800000000000000
+      internalID: 7618443584406369654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_12
+      name: Laser_12
       rect:
         serializedVersion: 2
         x: 384
@@ -427,14 +427,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aebf37dd5509eab0800000000000000
-      internalID: -4978442012479996256
+      spriteID: 95e5be5811fe97370800000000000000
+      internalID: 8320944645083979353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_13
+      name: Laser_13
       rect:
         serializedVersion: 2
         x: 416
@@ -448,14 +448,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f405c9f1e1ddcc810800000000000000
-      internalID: 1787046273608339535
+      spriteID: 178f208d70f04d660800000000000000
+      internalID: 7409563813294569585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrowleft_14
+      name: Laser_14
       rect:
         serializedVersion: 2
         x: 448
@@ -469,29 +469,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bf0959e9187efbd0800000000000000
-      internalID: -2594504282634383438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: arrowleft_15
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4d5d0fc2644d04d0800000000000000
-      internalID: -3166799771800347316
+      spriteID: 16454cc333058f060800000000000000
+      internalID: 6987423002858378337
       vertices: []
       indices: 
       edges: []
