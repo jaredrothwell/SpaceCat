@@ -370,56 +370,56 @@ public class Movement : MonoBehaviour
             Footsteps.getPlaybackState(out pbs);
             if (gravity == "down")
             {
-                if (Input.GetKey("a") | Input.GetKey("d"))
+                if ((Input.GetKey("a") | Input.GetKey("d")) && canJump)
                 {
                     if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
                     {
                         Footsteps.start();
                     }
                 }
-                if (Input.GetKeyUp("a") | Input.GetKeyUp("d"))
+                else
                 {
                     Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
             }
             else if (gravity == "up")
             {
-                if (Input.GetKey("d") | Input.GetKey("a"))
+                if ((Input.GetKey("d") | Input.GetKey("a")) && canJump)
                 {
-                    if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                    if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING && canJump)
                     {
                         Footsteps.start();
                     }
                 }
-                if (Input.GetKeyUp("d") | Input.GetKeyUp("a"))
+                else
                 {
                     Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
             }
             else if (gravity == "right")
             {
-                if (Input.GetKey("w") | Input.GetKey("s"))
+                if ((Input.GetKey("w") | Input.GetKey("s")) && canJump)
                 {
                     if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
                     {
                         Footsteps.start();
                     }
                 }
-                if (Input.GetKeyUp("w") | Input.GetKeyUp("s"))
+                else
                 {
                     Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
             }
             else if (gravity == "left")
             {
-                if (Input.GetKey("s") | Input.GetKey("w"))
+                if ((Input.GetKey("s") | Input.GetKey("w")) && canJump)
                 {
-                    if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                    if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING && canJump)
                     {
                         Footsteps.start();
                     }
                 }
-                if (Input.GetKeyUp("s") | Input.GetKeyUp("w"))
+                else
                 {
                     Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
