@@ -71,6 +71,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        checkGround();
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(Footsteps, GetComponent<Transform>(), GetComponent<Rigidbody>());
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(Booster, GetComponent<Transform>(), GetComponent<Rigidbody>());
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(Jump, GetComponent<Transform>(), GetComponent<Rigidbody>());
@@ -82,6 +83,7 @@ public class Movement : MonoBehaviour
         ps4.enableEmission = false;
         if (gravity == "zero")
         {
+            anime.SetBool("IsFalling", false);
             rb.gravityScale = 0;
             anime.SetBool("IsWalking", false);
             ZeroGMovement();
@@ -111,6 +113,14 @@ public class Movement : MonoBehaviour
             MovementLeft();
         }
         updateFuelUI();
+    }
+
+    void checkGround()
+    {
+        if(canJump)
+            anime.SetBool("IsFalling", false);
+        else
+            anime.SetBool("IsFalling", true);
     }
 
     void updateFuelUI()
