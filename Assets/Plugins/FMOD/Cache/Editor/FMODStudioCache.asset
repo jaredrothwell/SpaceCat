@@ -104,6 +104,46 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6744958726041143639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Booster
+  m_EditorClassIdentifier: 
+  Name: Booster
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-6466031418352830280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6153915773425612246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +164,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-6079873294528597467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Space Cat/Oxygen
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Space Cat/Oxygen
+  guid: 21c66962eafc0e4a9406c76154954a05
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2638
 --- !u!114 &-6050148374255570880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,10 +227,30 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -3468855732413786290}
+  - {fileID: 3869403740014484726}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5990531476112627334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jumping/UpDown
+  m_EditorClassIdentifier: 
+  Name: UpDown
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-4751702391099614513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
-  lastModified: 637361352592173461
+  lastModified: 637362222672410513
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -206,6 +289,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-4375501988901568861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4315959849560592047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,23 +426,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.strings.bank
   Name: Build/Desktop/Master.strings
-  lastModified: 637361352592183443
+  lastModified: 637362222672500544
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1252
+    Value: 1324
+  - Name: 
+    Value: 1324
   - Name: Assets
-    Value: 1252
+    Value: 1324
   - Name: Build
-    Value: 1252
+    Value: 1324
   - Name: Metadata
-    Value: 1252
+    Value: 1324
   - Name: Plugins
-    Value: 1252
+    Value: 1324
   - Name: SFX
-    Value: 1252
+    Value: 1324
   Exists: 1
 --- !u!114 &-2611850757652675436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-2215167667738445667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -463,12 +588,13 @@ MonoBehaviour:
   - {fileID: -8252752360340187133}
   - {fileID: 3190682624066937049}
   - {fileID: 3969786673565336191}
+  - {fileID: -6079873294528597467}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4751702391099614513}
   StringsBanks:
   - {fileID: -2725459969524434313}
-  stringsBankWriteTime: 637361352592183443
+  stringsBankWriteTime: 637362222672500544
   cacheVersion: 5
 --- !u!114 &78832064469924739
 MonoBehaviour:
@@ -553,7 +679,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 1569983497672391356}
+  - {fileID: -4375501988901568861}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -636,6 +762,26 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2134707809077282926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Booster
+  m_EditorClassIdentifier: 
+  Name: Booster
+  Min: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -723,6 +869,46 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3869403740014484726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jumping/UpDown
+  m_EditorClassIdentifier: 
+  Name: UpDown
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3901891993139050135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Booster
+  m_EditorClassIdentifier: 
+  Name: Booster
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &3969786673565336191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,10 +929,11 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 78832064469924739}
+  - {fileID: 8033349050676595925}
+  - {fileID: 2134707809077282926}
   MinDistance: 1
   MaxDistance: 20
-  Length: 13754
+  Length: 6907
 --- !u!114 &4259220585605650246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,6 +1054,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &5868669409827775671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jumping/UpDown
+  m_EditorClassIdentifier: 
+  Name: UpDown
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &5873751595516749023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Fuel
+  m_EditorClassIdentifier: 
+  Name: Fuel
+  Min: 0
+  Max: 10000
+  Default: 10000
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5993278237500584358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,6 +1173,46 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &7987645348108155965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Fuel
+  m_EditorClassIdentifier: 
+  Name: Fuel
+  Min: 0
+  Max: 10000
+  Default: 10000
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &8033349050676595925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Fuel
+  m_EditorClassIdentifier: 
+  Name: Fuel
+  Min: 0
+  Max: 10000
+  Default: 10000
   ID:
     data1: 0
     data2: 0

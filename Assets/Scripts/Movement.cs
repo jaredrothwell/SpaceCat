@@ -29,6 +29,8 @@ public class Movement : MonoBehaviour
     private CircleCollider2D cc;
     private Animator anime;
 
+    FMOD.Studio.EventInstance Refil;
+
     FMOD.Studio.EventInstance Footsteps;
     FMOD.Studio.EventDescription Surface;
     FMOD.Studio.PARAMETER_DESCRIPTION sur;
@@ -36,13 +38,18 @@ public class Movement : MonoBehaviour
 
     FMOD.Studio.EventInstance Booster;
     FMOD.Studio.EventDescription State;
+    FMOD.Studio.EventDescription Gas;
     FMOD.Studio.PARAMETER_DESCRIPTION OnOff;
+    FMOD.Studio.PARAMETER_DESCRIPTION Levl;
     FMOD.Studio.PARAMETER_ID IO;
+    FMOD.Studio.PARAMETER_ID Lev;
 
     FMOD.Studio.EventInstance Jump;
     FMOD.Studio.EventDescription Up;
     FMOD.Studio.PARAMETER_DESCRIPTION UpDown;
     FMOD.Studio.PARAMETER_ID UD;
+
+    FMOD.Studio.PLAYBACK_STATE pbs;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +61,7 @@ public class Movement : MonoBehaviour
         Footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/Characters/Space Cat/Walking");
         Booster = FMODUnity.RuntimeManager.CreateInstance("event:/Characters/Space Cat/Booster");
         Jump = FMODUnity.RuntimeManager.CreateInstance("event:/Characters/Space Cat/Jumping");
+        Refil = FMODUnity.RuntimeManager.CreateInstance("event:/Characters/Space Cat/Oxygen");
 
         Surface = FMODUnity.RuntimeManager.GetEventDescription("event:/Characters/Space Cat/Walking");
         Surface.getParameterDescriptionByName("Surface", out sur);
@@ -62,6 +70,10 @@ public class Movement : MonoBehaviour
         State = FMODUnity.RuntimeManager.GetEventDescription("event:/Characters/Space Cat/Booster");
         State.getParameterDescriptionByName("Booster", out OnOff);
         IO = OnOff.id;
+
+        Gas = FMODUnity.RuntimeManager.GetEventDescription("event:/Characters/Space Cat/Booster");
+        Gas.getParameterDescriptionByName("Fuel", out Levl);
+        Lev = Levl.id;
 
         Up = FMODUnity.RuntimeManager.GetEventDescription("event:/Characters/Space Cat/Jumping");
         Up.getParameterDescriptionByName("UpDown", out UpDown);
@@ -77,6 +89,7 @@ public class Movement : MonoBehaviour
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(Footsteps, GetComponent<Transform>(), GetComponent<Rigidbody>());
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(Booster, GetComponent<Transform>(), GetComponent<Rigidbody>());
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(Jump, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(Refil, GetComponent<Transform>(), GetComponent<Rigidbody>());
         Playsound();
         Jump.setParameterByID(UD, 0);
         ps1.enableEmission = false;
@@ -335,16 +348,20 @@ public class Movement : MonoBehaviour
         if (collision.tag == "fuel")
         {
             fuel = Maxfuel;
+            Refil.getPlaybackState(out pbs);
+            if(pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+            {
+                Refil.start();
+            }
         }
     }
     public void Playsound()
     {
-        FMOD.Studio.PLAYBACK_STATE pbs;
+        Booster.setParameterByID(Lev, (float)fuel);
         if (gravity == "zero" && fuel > 0)
         {
             Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Booster.getPlaybackState(out pbs);
-            Footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             if (Input.GetKey("a") | Input.GetKey("w") | Input.GetKey("d") | Input.GetKey("s"))
             {
                 if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
@@ -361,8 +378,19 @@ public class Movement : MonoBehaviour
         }
         else if(gravity == "zero" && fuel <= 0)
         {
+            Booster.getPlaybackState(out pbs);
             Booster.setParameterByID(IO, 0);
+            Booster.setParameterByID(Lev, 0f);
             Booster.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            
+            if (Input.GetKeyDown("a") | Input.GetKeyDown("w") | Input.GetKeyDown("d") | Input.GetKeyDown("s"))
+            {
+                if (pbs != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    Booster.start();
+                }
+                Booster.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
         }
         else if (gravity != "zero")
         {
