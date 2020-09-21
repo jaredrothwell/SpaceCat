@@ -105,6 +105,7 @@ public class Movement : MonoBehaviour
         {
             deathText.text = "You Died! Press R to restart level";
             IsDead = true;
+            rb.simulated = false;
         }
         else if (gravity == "zero")
         {
