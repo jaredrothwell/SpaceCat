@@ -149,6 +149,10 @@ public class Movement : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+        if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
     }
 
     void checkGround()
