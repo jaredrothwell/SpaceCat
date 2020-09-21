@@ -173,6 +173,7 @@ MonoBehaviour:
   Gscale: 0.5
   Maxfuel: 10000
   fuel: 10000
+  fuelScale: 900
   canJump: 0
   textUI: {fileID: 0}
   ps1: {fileID: 0}

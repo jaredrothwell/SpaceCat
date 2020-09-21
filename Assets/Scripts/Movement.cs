@@ -13,8 +13,9 @@ public class Movement : MonoBehaviour
     [SerializeField] private float Rspd = 1.0f;
     [SerializeField] private float JumpForce = 30.0f;
     [SerializeField] private float Gscale = 1.0f;
-    [SerializeField] private int Maxfuel = 100;
-    [SerializeField] private int fuel = 100;
+    [SerializeField] private float Maxfuel = 100f;
+    [SerializeField] private float fuel = 100f;
+    [SerializeField] private float fuelScale = 10f;
 
     public bool canJump = false;
     public Text textUI = null;
@@ -179,25 +180,25 @@ public class Movement : MonoBehaviour
         if (Input.GetKey("w") && fuel > 0)
         {
             vertical += 1;
-            fuel--;
+            fuel -= fuelScale * Time.deltaTime;
             ps2.enableEmission = true;
         }
         if (Input.GetKey("a") && fuel > 0)
         {
             horizontal -= 1;
-            fuel--;
+            fuel -= fuelScale * Time.deltaTime;
             ps4.enableEmission = true;
         }
         if (Input.GetKey("s") && fuel > 0)
         {
             vertical -= 1;
-            fuel--;
+            fuel -= fuelScale * Time.deltaTime;
             ps1.enableEmission = true;
         }
         if (Input.GetKey("d") && fuel > 0)
         {
             horizontal += 1;
-            fuel--;
+            fuel -= fuelScale * Time.deltaTime;
             ps3.enableEmission = true;
         }
         Vector2 movement = new Vector2(horizontal, vertical);
