@@ -795,7 +795,7 @@ retry:
                 }
                 else
                 #elif UNITY_WEBGL && !UNITY_EDITOR
-                if (bankPath.Contains("http://"))
+                if (true)
                 {
                     Instance.StartCoroutine(Instance.loadFromWeb(bankPath, bankName, loadSamples));
                 }
