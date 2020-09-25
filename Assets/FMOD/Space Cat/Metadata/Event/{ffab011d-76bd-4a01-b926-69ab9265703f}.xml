@@ -64,8 +64,6 @@
 	<object class="GroupTrack" id="{7a9d0c7e-2f9f-4b67-adb6-7719be99cc46}">
 		<relationship name="modules">
 			<destination>{19cb5cad-ea13-431d-a4b4-27f6b09983d2}</destination>
-			<destination>{c4a15cbd-000a-4269-93fa-551d4513bcd0}</destination>
-			<destination>{0534e503-2e0b-408c-9749-c5a09c085c92}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{b8c0e0c9-a6d4-417d-97d1-b47afdfaadf1}</destination>
@@ -75,8 +73,6 @@
 	<object class="ParameterProxy" id="{451f7f71-5d13-44ae-a178-6b685c4b1149}">
 		<relationship name="modules">
 			<destination>{19cb5cad-ea13-431d-a4b4-27f6b09983d2}</destination>
-			<destination>{c4a15cbd-000a-4269-93fa-551d4513bcd0}</destination>
-			<destination>{0534e503-2e0b-408c-9749-c5a09c085c92}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{71bffa66-7898-4658-b048-42110c7c40e2}</destination>
@@ -104,32 +100,10 @@
 	<object class="MixerBusPanner" id="{ae6ce49d-2ff0-4241-a7d9-5ba005e1823f}" />
 	<object class="SingleSound" id="{19cb5cad-ea13-431d-a4b4-27f6b09983d2}">
 		<property name="volume">
-			<value>-17.5</value>
+			<value>-23.5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{9c98ff0a-20d9-45f4-88db-59903e9bdb10}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{c4a15cbd-000a-4269-93fa-551d4513bcd0}">
-		<property name="start">
-			<value>1</value>
-		</property>
-		<property name="volume">
-			<value>-9.5</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{7fb54c40-41b8-48f9-bf99-c8982a97150d}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{0534e503-2e0b-408c-9749-c5a09c085c92}">
-		<property name="start">
-			<value>1</value>
-		</property>
-		<property name="volume">
-			<value>-19.5</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{869dee40-ea4a-4368-a05e-e3ed89226eef}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b8c0e0c9-a6d4-417d-97d1-b47afdfaadf1}">
@@ -198,7 +172,7 @@
 			<value>59</value>
 		</property>
 		<property name="wetLevel">
-			<value>-11.3000002</value>
+			<value>-17.5</value>
 		</property>
 	</object>
 </objects>
