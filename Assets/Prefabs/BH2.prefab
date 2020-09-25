@@ -5151,7 +5151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6104c5c3480b2ea4eae4fc45ecfca762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 5090489320458206748}
   shouldAttract: 1
 --- !u!50 &5090489320458206748
 Rigidbody2D:
