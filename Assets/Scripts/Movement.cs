@@ -107,6 +107,7 @@ public class Movement : MonoBehaviour
             deathText.text = "You Died! Press R to restart level";
             IsDead = true;
             rb.simulated = false;
+            anime.SetBool("IsDead", true);
         }
         else if (gravity == "zero")
         {
