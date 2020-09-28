@@ -244,7 +244,8 @@ public class Movement : MonoBehaviour
         }
         Vector2 velocity = new Vector2(horizontal * spd, rb.velocity.y + vertical);
         rb.velocity = velocity;
-        rb.rotation = 0;
+        changeRotation(0);
+        //rb.rotation = 0;
         flip(true, rb.velocity.x);
     }
 
@@ -272,7 +273,8 @@ public class Movement : MonoBehaviour
         }
         Vector2 velocity = new Vector2(horizontal * spd, rb.velocity.y + vertical);
         rb.velocity = velocity;
-        rb.rotation = 180;
+        changeRotation(180);
+        //rb.rotation = 180;
         flip(false, rb.velocity.x);
     }
 
@@ -300,7 +302,8 @@ public class Movement : MonoBehaviour
         }
         Vector2 velocity = new Vector2(horizontal + rb.velocity.x, vertical * spd);
         rb.velocity = velocity;
-        rb.rotation = 90;
+        changeRotation(90);
+        //rb.rotation = 90;
         flip(true, rb.velocity.y);
     }
 
@@ -328,8 +331,78 @@ public class Movement : MonoBehaviour
         }
         Vector2 velocity = new Vector2(horizontal + rb.velocity.x, vertical * spd);
         rb.velocity = velocity;
-        rb.rotation = 270;
+        changeRotation(270);
+        //rb.rotation = 270;
         flip(false, rb.velocity.y);
+    }
+
+    void changeRotation(float r)
+    {
+        rb.rotation = rb.rotation % 360;
+        if (rb.rotation != r)
+        {
+            if(Mathf.Abs(rb.rotation - r) < 1)
+            {
+                rb.rotation = r;
+            }
+            else if(CalcShortestRotDirection(rb.rotation, r))
+            {
+                rb.rotation += 1;
+            }
+            else
+            {
+                rb.rotation -= 1;
+            }
+        }
+    }
+
+    // If the return value is positive, then rotate to the left. Else,
+    // rotate to the right.
+    float CalcShortestRot(float from, float to)
+    {
+        // If from or to is a negative, we have to recalculate them.
+        // For an example, if from = -45 then from(-45) + 360 = 315.
+        if (from < 0)
+            from += 360;
+
+        if (to < 0)
+            to += 360;
+
+        // Do not rotate if from == to.
+        if (from == to || from == 0 && to == 360 || from == 360 && to == 0)
+            return 0;
+
+        // Pre-calculate left and right.
+        float left = (360 - from) + to;
+        float right = from - to;
+        // If from < to, re-calculate left and right.
+        if (from < to)
+        {
+            if (to > 0)
+            {
+                left = to - from;
+                right = (360 - to) + from;
+            }
+            else
+            {
+                left = (360 - to) + from;
+                right = to - from;
+            }
+        }
+
+        // Determine the shortest direction.
+        return ((left <= right) ? left : (right * -1));
+    }
+
+    // Call CalcShortestRot and check its return value.
+    // If CalcShortestRot returns a positive value, then this function
+    // will return true for left. Else, false for right.
+    bool CalcShortestRotDirection(float from, float to)
+    {
+        // If the value is positive, return true (left).
+        if (CalcShortestRot(from, to) >= 0)
+            return true;
+        return false; // right
     }
 
     void flip(bool f, float x)
