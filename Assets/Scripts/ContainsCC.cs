@@ -6,7 +6,7 @@ public class ContainsCC : MonoBehaviour
 {
     CircleCollider2D cc;
     GameObject player;
-    public float spd = 100f;
+    //public float spd = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,6 @@ public class ContainsCC : MonoBehaviour
         {
             player.GetComponent<Movement>().gravity = tag;
         }
-        transform.Rotate(0, 0, spd * Time.deltaTime);
+        //transform.Rotate(0, 0, spd * Time.deltaTime);
     }
 }
