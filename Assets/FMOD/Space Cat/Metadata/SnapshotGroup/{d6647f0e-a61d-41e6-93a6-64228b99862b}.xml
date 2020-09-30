@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="SnapshotGroup" id="{d6647f0e-a61d-41e6-93a6-64228b99862b}">
+		<property name="name">
+			<value>Planet 1 (Yarn)</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b0f814ec-03c6-4f01-8b2e-c59cacaf6086}</destination>
+		</relationship>
+	</object>
+</objects>

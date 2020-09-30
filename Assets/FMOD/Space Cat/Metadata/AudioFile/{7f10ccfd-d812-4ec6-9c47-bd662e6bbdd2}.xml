@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{7f10ccfd-d812-4ec6-9c47-bd662e6bbdd2}">
+		<property name="assetPath">
+			<value>Black Hole Mid.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8.0230612244897959</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fd13686a-1d91-4d64-a428-703ebf92ef5b}</destination>
+		</relationship>
+	</object>
+</objects>

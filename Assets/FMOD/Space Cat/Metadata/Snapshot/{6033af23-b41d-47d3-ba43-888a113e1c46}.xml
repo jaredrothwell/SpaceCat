@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Snapshot" id="{6033af23-b41d-47d3-ba43-888a113e1c46}">
+		<property name="name">
+			<value>Ship Small</value>
+		</property>
+		<property name="behavior">
+			<value>1</value>
+		</property>
+		<relationship name="mixer">
+			<destination>{54259929-aff4-4ab5-bcc0-cb4dc816bac8}</destination>
+		</relationship>
+		<relationship name="automatableProperties">
+			<destination>{4e77375f-a7f3-4853-b24b-cadb16ea307b}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{e497c3c1-535f-44b2-9871-062a2b40a53a}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{5b3e5cbb-4878-4467-904f-32773e15561d}</destination>
+		</relationship>
+		<relationship name="snapshotMasterTrack">
+			<destination>{cdc125ac-b422-4c17-9746-be15b7f81f99}</destination>
+		</relationship>
+	</object>
+	<object class="EventAutomatableProperties" id="{4e77375f-a7f3-4853-b24b-cadb16ea307b}" />
+	<object class="MarkerTrack" id="{e497c3c1-535f-44b2-9871-062a2b40a53a}" />
+	<object class="Timeline" id="{5b3e5cbb-4878-4467-904f-32773e15561d}" />
+	<object class="SnapshotMasterTrack" id="{cdc125ac-b422-4c17-9746-be15b7f81f99}" />
+</objects>

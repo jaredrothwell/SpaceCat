@@ -61,6 +61,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-7732777231308887556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/World 1/Lazers
+  m_EditorClassIdentifier: 
+  Path: event:/World 1/Lazers
+  guid: 47f1e247d3856541bc3a1135666a8526
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7225437097230682934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +184,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-6770765329558346143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Fuel
+  m_EditorClassIdentifier: 
+  Name: Fuel
+  Min: 0
+  Max: 10000
+  Default: 10000
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6765284883809877035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +350,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -5881247546035446844}
+  - {fileID: 8108494260840514928}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -351,6 +394,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-5352647750484707410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-5292961935422436269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landing/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-5241425049464181672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +454,49 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-5214786932581937735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/World 1/Grav Swap
+  m_EditorClassIdentifier: 
+  Path: event:/World 1/Grav Swap
+  guid: ce101ceed13c63409a726ee8c4699aa6
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4833373904695112445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jumping/UpDown
+  m_EditorClassIdentifier: 
+  Name: UpDown
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4751702391099614513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
-  lastModified: 637361978939370991
+  lastModified: 637370917149851338
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -409,6 +535,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-4447137816939480194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Spaceship/Ship Main
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Spaceship/Ship Main
+  guid: c615404dbcd59249ab9415128d57bb92
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4375501988901568861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,6 +618,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-4299521066521429144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Spaceship/Ship Small
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Spaceship/Ship Small
+  guid: 23af33601db4d347ba43888a113e1c46
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4261670927072981927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,6 +724,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-3075407020848812109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spaceship/Progression
+  m_EditorClassIdentifier: 
+  Name: Progression
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2725459969524434313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,21 +758,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Space Cat/Build/Desktop/Master.strings.bank
   Name: Build/Desktop/Master.strings
-  lastModified: 637361978939410887
+  lastModified: 637370917149951364
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1324
+    Value: 2184
+  - Name: 
+    Value: 2184
   - Name: Assets
-    Value: 1324
+    Value: 2184
   - Name: Build
-    Value: 1324
+    Value: 2184
   - Name: Metadata
-    Value: 1324
+    Value: 2184
   - Name: Plugins
-    Value: 1324
+    Value: 2184
   - Name: SFX
-    Value: 1324
+    Value: 2184
   Exists: 1
 --- !u!114 &-2611850757652675436
 MonoBehaviour:
@@ -662,6 +856,72 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-1755558021146665672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Space Cat/Booster Start
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Space Cat/Booster Start
+  guid: 483b0f59f288374abcd5451ee7a98c4d
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 850
+--- !u!114 &-1692636379214244402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Fuel
+  m_EditorClassIdentifier: 
+  Name: Fuel
+  Min: 0
+  Max: 10000
+  Default: 10000
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-1605245083200801914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Spaceship/Ship Large
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Spaceship/Ship Large
+  guid: da41ceb9163ab241971fda7dc4fbbac6
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1298713050752523941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,6 +982,69 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-571821354904662345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/World 1/Door
+  m_EditorClassIdentifier: 
+  Path: event:/World 1/Door
+  guid: 72e4b8500708cb42b64b7579a664ff72
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-510928790950468982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jumping/UpDown
+  m_EditorClassIdentifier: 
+  Name: UpDown
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-337266483986260652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-126036185469144316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,12 +1110,22 @@ MonoBehaviour:
   - {fileID: 3190682624066937049}
   - {fileID: 3969786673565336191}
   - {fileID: -6079873294528597467}
+  - {fileID: 4723121799866681725}
+  - {fileID: 2730935714265479000}
+  - {fileID: -7732777231308887556}
+  - {fileID: -1755558021146665672}
+  - {fileID: -571821354904662345}
+  - {fileID: -5214786932581937735}
+  - {fileID: 341297488632591298}
+  - {fileID: -4299521066521429144}
+  - {fileID: -4447137816939480194}
+  - {fileID: -1605245083200801914}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4751702391099614513}
   StringsBanks:
   - {fileID: -2725459969524434313}
-  stringsBankWriteTime: 637361978939410887
+  stringsBankWriteTime: 637370917149951364
   cacheVersion: 5
 --- !u!114 &78832064469924739
 MonoBehaviour:
@@ -830,6 +1163,29 @@ MonoBehaviour:
   guid: e55638c2c36ebe46bd04a005016bfc20
   Banks:
   - {fileID: -9183627706458981312}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &341297488632591298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Space Cat/Death
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Space Cat/Death
+  guid: cf7c60671443854cba8186d8ac5fc9f7
+  Banks:
+  - {fileID: -4751702391099614513}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -877,6 +1233,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &760643688502757254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spaceship/Progression
+  m_EditorClassIdentifier: 
+  Name: Progression
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &949190145776489827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,10 +1273,30 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -7788055780294903566}
+  - {fileID: -337266483986260652}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1008981013498422167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Booster
+  m_EditorClassIdentifier: 
+  Name: Booster
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &1184484915128464278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,10 +1316,11 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -3075407020848812109}
   MinDistance: 0
   MaxDistance: 0
-  Length: 81000
+  Length: 189000
 --- !u!114 &1459353661636472696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,6 +1441,30 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2730935714265479000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Space Cat/Landing
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Space Cat/Landing
+  guid: 3ccf4d554f5c834991b07c4fa02375e8
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5292961935422436269}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3156963316346229307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,6 +1508,66 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3247239793195101052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Fuel
+  m_EditorClassIdentifier: 
+  Name: Fuel
+  Min: 0
+  Max: 10000
+  Default: 10000
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3452449892679170070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Booster
+  m_EditorClassIdentifier: 
+  Name: Booster
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3794188487427087468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Booster/Booster
+  m_EditorClassIdentifier: 
+  Name: Booster
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3869403740014484726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,11 +1628,11 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -4322872779702382468}
-  - {fileID: 637240009861812791}
+  - {fileID: 3247239793195101052}
+  - {fileID: 3452449892679170070}
   MinDistance: 1
   MaxDistance: 20
-  Length: 6907
+  Length: 6862
 --- !u!114 &4259220585605650246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,6 +1673,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &4723121799866681725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/World 1/Black Hole
+  m_EditorClassIdentifier: 
+  Path: event:/World 1/Black Hole
+  guid: 262d8018c125314588cc1b37a1e9ff1f
+  Banks:
+  - {fileID: -4751702391099614513}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 3.2
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4747108479244615544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,6 +1727,26 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &4875520960800839972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landing/Surface
   m_EditorClassIdentifier: 
   Name: Surface
   Min: 0
@@ -1375,6 +1899,46 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7329115623157355428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &7360883573412525322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spaceship/Progression
+  m_EditorClassIdentifier: 
+  Name: Progression
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &7504571821335473670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,6 +1999,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &8108494260840514928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jumping/UpDown
+  m_EditorClassIdentifier: 
+  Name: UpDown
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &8182705606265044355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1471,6 +2055,26 @@ MonoBehaviour:
   Min: 0
   Max: 10000
   Default: 10000
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &8891505732204016343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Landing/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 10
+  Default: 0
   ID:
     data1: 0
     data2: 0

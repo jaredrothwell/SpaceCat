@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="SnapshotGroup" id="{e746a76e-38c5-4cc0-aa11-24beae2aa3ae}">
+		<property name="name">
+			<value>Spaceship</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b0f814ec-03c6-4f01-8b2e-c59cacaf6086}</destination>
+		</relationship>
+		<relationship name="items">
+			<destination>{4d4015c6-d5bc-4992-ab94-15128d57bb92}</destination>
+			<destination>{6033af23-b41d-47d3-ba43-888a113e1c46}</destination>
+			<destination>{b9ce41da-3a16-41b2-971f-da7dc4fbbac6}</destination>
+		</relationship>
+	</object>
+</objects>

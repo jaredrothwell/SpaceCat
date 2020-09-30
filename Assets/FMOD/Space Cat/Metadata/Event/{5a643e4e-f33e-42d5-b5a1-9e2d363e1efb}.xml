@@ -61,10 +61,14 @@
 			<destination>{9d94b227-462c-4cf5-ba5a-a3ef1be83ec3}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{9f8c0a6d-84bb-4dee-8a1d-ef3756844a40}</destination>
+			<destination>{8cfef17b-9d75-4dae-b5f7-4b46d407be23}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{f05a6f17-76f2-41b1-a537-76fe8b96fea5}" />
+	<object class="EventAutomatableProperties" id="{f05a6f17-76f2-41b1-a537-76fe8b96fea5}">
+		<property name="maxVoices">
+			<value>4</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{990591b7-3b75-4480-b5e1-482cd5cb9a1e}" />
 	<object class="GroupTrack" id="{b8159697-02b3-4693-9578-610d0483e0a3}">
 		<relationship name="modules">
@@ -277,6 +281,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{3834d486-1519-4f95-8286-ff3ea33cc2ac}" />
 	<object class="SFXReverbEffect" id="{5d49f104-c41b-4c4d-bc0e-198ccad5aac8}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<property name="earlyDelay">
 			<value>7</value>
 		</property>
